@@ -1,0 +1,17 @@
+{% extends "AppCoder/padre.html" %}
+{% load static %}
+{% block section_name %}
+<h3>Resultado de su Busqueda</h3>
+{% endblock %}
+{% block contenidoQueCambia %}
+<h1> Estamos buscando los service del chasis {{chasis}}</h1>
+{% if service %}
+<ul>
+    {% for service in service %}
+    <li>{{service.nombre}}</li>
+    <li>{{service.chasis}}</li>
+    <br>      
+    {% endfor%}
+</ul>
+{% endif %}
+{% endblock %}

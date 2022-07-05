@@ -1,0 +1,11 @@
+{% extends "AppCoder/padre.html" %}
+{% load static %}
+{% block contenidoQueCambia %}
+<p>NOMBRE: <i>{{cliente.nombre}}</i></p>
+<p>APELLIDO: <i>{{cliente.apellido}}</i></p>
+<p>EMAIL: <i>{{cliente.email}}</i></p>
+
+<p>
+  <a href="{% url 'cliente_listar' %}">Volver a la lista de clientes</a>
+</p>
+{% endblock %} 

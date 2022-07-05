@@ -1,0 +1,12 @@
+{% extends "AppCoder/padre.html" %}
+{% load static %}
+{% block section_name %}
+<h3>Buscador de Chasis</h3>
+{% endblock %}
+{% block contenidoQueCambia %}
+<form action="{% url 'Buscar' %}" method="GET">
+    <h1>Ingrese los datos del Chasis</h1>
+    <input type="number" name="chasis" placeholder="CHASIS" id="chasis">
+    <input type="submit" value="Buscar">
+</form>                       
+{% endblock %}

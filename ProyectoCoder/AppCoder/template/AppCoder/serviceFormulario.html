@@ -1,0 +1,14 @@
+{% extends "AppCoder/padre.html" %}
+{% load static %}
+{% block section_name %}
+<h3>Formulario para los Service</h3>
+{% endblock %}
+{% block contenidoQueCambia %}
+<form action="{% url "ServiceFormulario" %}" method="POST">{% csrf_token %}
+    <h1>Ingrese los datos del service</h1>
+    <table>
+        {{miFormulario.as_table}}
+    </table>
+    <input type="submit" value="Enviar formulario">
+</form>                       
+{% endblock %}
